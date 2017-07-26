@@ -7,4 +7,8 @@ public class ListOfItems {
 
 	}
 
+	///information about items is stored here in this class
+	
+	
+	
 }

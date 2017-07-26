@@ -9,9 +9,8 @@ public class Items {
 		int iD;
 
 		
-		
-				
-		 public Items(String name, String type, int iD) {
+	
+		public Items(String name, String type, int iD) {
 			super();
 			this.name = name;
 			this.type = type;
@@ -21,8 +20,7 @@ public class Items {
 		public String toString(){
 		 return "Name: " + name + "Type: " + type + "ID: " + iD;
 		 }
-
-		 
+ 
 		 
 		 
 	}                          
