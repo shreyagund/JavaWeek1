@@ -1,5 +1,11 @@
 package library;
-
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.InputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 
@@ -79,16 +85,72 @@ public class Library {
 	}
 	
 	
-	////check in item////////add item to the list - use scanner
+	////check in item
 	
-	public void checkInItem(){
+	public void checkInItem(String name){
+	
+		for (Items i : ListOfItems){
+			
+			if(name.equals("name")  && i instanceof Items){
+				
+				i.checkedIn = false;
+				System.out.println("This item has not been checked in: " );
+				
+			}
+			
+			else{
+			
+				i.checkedIn = true;
+					System.out.println("Checked in "+ name);
+			}
+		}
+		
 		
 	}
 
 	
 	
+	public void writeToFile(){
+		
+	{
+        
+    try 
+    {
+    	PrintWriter pw = new PrintWriter (new FileOutputStream("Library System.txt"));
+    	for( Items Items : ListOfItems);
+    	pw.println(ListOfItems);
+    	pw.close();
+    	System.out.println(ListOfItems);
+    	}
+    catch (Exception e)
+    	{
+    	e.printStackTrace();
+    	}
+   
+    }
+	
+	
+}
+	
+	
+//	public void retrieveFile() throws IOException{
+//		
+//		InputStream inputStream = ListOfItems.class.getResourceAsStream("Library.txt");
+//		
+//		BufferedReader file = new BufferedReader(new FileReader(Library.txt));
+//		file.readLine();
+//		file.close();
+//		
+//		
+//		BufferedReader br = null;
+//		FileReader fr = null;
+//		
+//	}
 	
 ///////MEMBER////////
+	
+	
+	
 	
 	
 ArrayList <Member> MemberList = new ArrayList <Member> ();
@@ -136,9 +198,6 @@ ArrayList <Member> MemberList = new ArrayList <Member> ();
 	}
 
 
-
-	
-	
 	////update member
 	
 	public void updateMember(String name, int age, int memberID)
@@ -149,6 +208,6 @@ ArrayList <Member> MemberList = new ArrayList <Member> ();
 		
 		
 	}
-	
+
 	
 }

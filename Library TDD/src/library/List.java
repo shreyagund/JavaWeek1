@@ -38,8 +38,11 @@ public class List {
 		l.addItems(i6);
 		l.showItems();
 		l.removeItems(1);
-		l.updateItems("Captain Underpants", "book", 1); //updating no. 1
-		l.checkOutItem("Vogue ", "Magazine ", 2);  
+		l.updateItems(" Captain Underpants ", " book ", 1); //updating no. 1
+		l.checkOutItem(" Vogue ", "Magazine ", 2);  
+		l.checkInItem(" Angry Adam ");
+		l.writeToFile();
+		
 		
 		
 		l.addMember(m1);
@@ -49,13 +52,8 @@ public class List {
 		l.addMember(m5);
 		l.showMember();
 		l.removeMember(106);
-		l.updateMember("Shreya", 21, 3); //the last number is position in arraylist
+		l.updateMember("Shreya", 21, 3); //the last number is position in arrayList
 		
-		
-		
-				
 	}
 
-
-	
 }

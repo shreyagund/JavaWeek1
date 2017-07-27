@@ -7,7 +7,7 @@ public class Items {
 		String name;
 		String type;    //books/journals/magazines
 		int iD;
-
+		boolean checkedIn;
 		
 	
 		public Items(String name, String type, int iD) {
